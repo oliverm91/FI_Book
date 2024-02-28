@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Fixed-Income-Book
+Version: 0.1.1
+Summary: Classes to model a Chilean Fixed Income Order Book.
+Home-page: https://github.com/oliverm91/FI_Book
+Author: Oliver Mohr B.
+Author-email: oliver.mohr.b@gmail.com
+Keywords: outlook,outlook wrapper
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
