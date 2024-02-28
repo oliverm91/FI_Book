@@ -15,12 +15,12 @@ class Order:
         self.trader = trader
         self.all_amount = all_amount
 
-    def __dict__(self):
+    def to_dict(self):
         return {
             'notional': self.notional,
             'irr': self.irr,
-            'broker': getattr(self, 'broker', ''),
-            'trader': getattr(self, 'trader', ''),
+            'broker': self.broker if self.broker is not None else '',
+            'trader': self.trader if self.trader is not None else '',
             'all_amount': getattr(self, 'all_amount', '')
         }
     

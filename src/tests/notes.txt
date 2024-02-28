@@ -1,0 +1,4 @@
+Trade por una parte de una orden: Llega trade y Change con mismo OrderID en mismo mensaje con EntryType BID/OFFER con nuevo nocional y amount
+Trade por orden completa: Llega trade y Delete con mismo OrderID
+
+Modificación de orden: Llega Delete y New con OrderID iguales al original

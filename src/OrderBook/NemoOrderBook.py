@@ -65,10 +65,13 @@ class NemoSettlementOrderBookSide:
                 self.logger(f'Warning: {msg}. Skipping delete order...')
 
         deleted_position = order_to_delete._position
-        del self._order_id_order_dict[order_id]        
+        del self._order_id_order_dict[order_id]
         following_orders = self.orders[deleted_position:]
         for following_order in following_orders:
             following_order._position -= 1
+
+    def get_order(self, order_id: str) -> Order:
+        return self._order_id_order_dict[order_id]
 
 
 class NemoSettlementOrderBook:
