@@ -22,7 +22,8 @@ class Order:
             'irr': self.irr,
             'broker': self.broker if self.broker is not None else '',
             'trader': self.trader if self.trader is not None else '',
-            'all_amount': self.all_amount if self.all_amount is not None else ''
+            'all_amount': self.all_amount if self.all_amount is not None else '',
+            'estimated_notional': self.estimated_all_notional if self.estimated_all_notional is not None else ''
         }
     
     def __str__(self):
