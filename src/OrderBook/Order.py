@@ -21,7 +21,7 @@ class Order:
             'irr': self.irr,
             'broker': self.broker if self.broker is not None else '',
             'trader': self.trader if self.trader is not None else '',
-            'all_amount': getattr(self, 'all_amount', '')
+            'all_amount': self.all_amount if self.all_amount is not None else ''
         }
     
     def __str__(self):
