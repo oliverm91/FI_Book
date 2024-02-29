@@ -1,7 +1,7 @@
 from typing import Any
 from json import loads
 
-from OrderBook.OrderBook import FI_Book
+from FI_Book.OrderBook import FI_Book
 
 from .get_fix_messages import get_messages
 from .book_updating import update_book

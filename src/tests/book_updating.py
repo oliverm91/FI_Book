@@ -4,9 +4,9 @@ from EasyFIX.Body import MDEntry
 from EasyFIX.definitions.market_data.values import MDUpdateAction, MDEntryType, Side
 from EasyFIX.definitions.market_data.tags import MDTags
 
-from OrderBook.OrderBook import FI_Book
-from OrderBook.NemoOrderBook import Settlement_Condition
-from OrderBook.Order import Order, OrderSide
+from FI_Book.OrderBook import FI_Book
+from FI_Book.NemoOrderBook import Settlement_Condition
+from FI_Book.Order import Order, OrderSide
 
 
 def get_settlement_condition(md_booking_ref_ID_value: str) -> Settlement_Condition:
