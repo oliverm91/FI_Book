@@ -5,7 +5,7 @@ class OrderSide(Enum):
     OFFER = 'OFFER'
 
 class Order:
-    __slots__ = 'notional', 'irr', '_order_id', '_position', 'broker', 'trader', 'all_amount'
+    __slots__ = 'notional', 'irr', '_order_id', '_position', 'broker', 'trader', 'all_amount', 'estimated_all_notional'
     def __init__(self, notional: float, irr: float, order_id: str, position: int, broker: int=None, trader: int=None, all_amount: float=None):
         self.notional = notional
         self.irr = irr
@@ -14,6 +14,7 @@ class Order:
         self.broker = broker
         self.trader = trader
         self.all_amount = all_amount
+        self.estimated_all_notional = None # To be defined outside library
 
     def to_dict(self):
         return {
