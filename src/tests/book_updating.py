@@ -34,7 +34,8 @@ def add_order(md_entry: MDEntry, fi_book: FI_Book):
     order_id = md_entry.get_tag_value(MDTags.OrderID)
     currency = md_entry.get_tag_value(MDTags.Currency)
     instrument_type = md_entry.get_tag_value(MDTags.SecurityType)
-    order = Order(notional, irr, order_id, 1, all_amount=valued_amount)
+    position = int(md_entry.get_tag_value(MDTags.MDentryPositionNo))
+    order = Order(notional, irr, order_id, position, all_amount=valued_amount)
     
     fi_book.add_order(nemo, order, side, settlement_condition, currency, instrument_type)
 
