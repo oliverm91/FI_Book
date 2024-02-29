@@ -2,9 +2,11 @@ from typing import Any
 from json import loads
 
 from FI_Book.OrderBook import FI_Book
+import FI_Book
 
 from .get_fix_messages import get_messages
 from .book_updating import update_book
+
 
 fix_messages = get_messages(exclude=b'lvalgorf', include=b'\x0135=X')
 fi_book = FI_Book()
